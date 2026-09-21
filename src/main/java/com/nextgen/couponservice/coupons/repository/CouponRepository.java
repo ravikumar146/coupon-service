@@ -1,0 +1,12 @@
+package com.nextgen.couponservice.coupons.repository;
+
+import com.nextgen.couponservice.coupons.entity.Coupon;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+/**
+ * Repository class for managing coupon data.
+ */
+@Repository
+public interface CouponRepository  extends JpaRepository<Coupon, Long> {
+}
