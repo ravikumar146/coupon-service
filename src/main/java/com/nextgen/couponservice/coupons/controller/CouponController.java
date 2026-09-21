@@ -1,5 +1,6 @@
 package com.nextgen.couponservice.coupons.controller;
 
+import com.nextgen.couponservice.coupons.dto.CouponResponse;
 import com.nextgen.couponservice.coupons.entity.Coupon;
 import com.nextgen.couponservice.coupons.service.CouponService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -28,9 +29,9 @@ public class CouponController {
         return couponService.createCoupon(coupon);
     }
 
-    @Operation(summary = "Get all coupons")
+    @Operation(summary = "Get all active coupons")
     @GetMapping("/list")
-    public List<Coupon> getAllCoupons() {
-        return couponService.getAllCoupons();
+    public List<CouponResponse> getActiveCoupons() {
+        return couponService.getActiveCoupons();
     }
 }

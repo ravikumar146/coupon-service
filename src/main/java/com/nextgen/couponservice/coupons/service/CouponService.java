@@ -1,5 +1,6 @@
 package com.nextgen.couponservice.coupons.service;
 
+import com.nextgen.couponservice.coupons.dto.CouponResponse;
 import com.nextgen.couponservice.coupons.entity.Coupon;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public interface CouponService {
 
     Coupon createCoupon(Coupon coupon);
 
-    List<Coupon> getAllCoupons();
+    List<CouponResponse> getActiveCoupons();
 }

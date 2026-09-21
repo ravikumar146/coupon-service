@@ -31,11 +31,22 @@ public class Coupon {
     private String code;
 
     @Column(nullable = false)
-    @Schema(description = "Coupon discount rate", example = "0.20%")
-    private Double discountRate;
+    private String title;
 
     @Column(nullable = false)
-    @Schema(description = "Coupon Expiration Date", example = "2026-12-30")
+    private String description;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private CouponType type;
+
+    @Column(name = "discount_value", nullable = false)
+    private Double value;
+
+    @Column(nullable = false)
+    private Double minimumOrder;
+
+    @Column(nullable = false)
     private String expirationDate;
 
     @Column(nullable = false)
